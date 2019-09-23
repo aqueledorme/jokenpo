@@ -25,3 +25,17 @@ function pedra() {
 
 
 }
+
+function tesoura() {
+    aleatorio = Math.floor(Math.random() * pc.length);
+    if (pc[aleatorio] === pc[2]) {
+        texto.textContent = "empatou";
+    }
+    if (pc[aleatorio] === pc[0]) {
+        texto.textContent = "voce perdeu";
+    }
+    if (pc[aleatorio] === pc[1]) {
+        texto.textContent = "voce ganhou";
+    }
+
+}
