@@ -3,8 +3,7 @@ var aleatorio;
 pc[0] = "pedra";
 pc[1] = "papel";
 pc[2] = "tesoura";
-
-
+var imagens = ["img/Papel.png", "img/Pedra.png", "Tesoura.png"];
 var texto;
 
 texto = document.getElementById("texto");
