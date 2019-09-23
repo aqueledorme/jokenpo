@@ -28,6 +28,7 @@ function pedra() {
 
 function tesoura() {
     aleatorio = Math.floor(Math.random() * pc.length);
+    document.getElementsByClassName("PC").InnerHTML = "<img src = ${imagens[aletorio]}> "
     if (pc[aleatorio] === pc[2]) {
         texto.textContent = "empatou";
     }
