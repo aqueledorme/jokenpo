@@ -43,6 +43,7 @@ function tesoura() {
 
 function papel() {
     aleatorio = Math.floor(Math.random() * pc.length);
+    document.getElementsByClassName("PC").InnerHTML = "<img src = ${imagens[aletorio]}> "
     if (pc[aleatorio] === pc[1]) {
         texto.textContent = "empatou";
     }
