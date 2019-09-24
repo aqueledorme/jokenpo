@@ -12,54 +12,14 @@ function seleção(e) {
     var nameclasseht = e.target.className;
     if (pc[aleatorio] === nameclasseht) {
         texto.textContent = "empatou";
+    } else if (pc[aleatorio] === "pedra" && nameclasseht === "papel" ||
+        pc[aleatorio] === "papel" && nameclasseht === "tesoura" ||
+        pc[aleatorio] === "tesoura" && nameclasseht === "pedra") {
+        texto.textContent = "ganhei"
+
+    } else {
+        texto.textContent = "perdi"
     }
 
 
 }
-/*function pedra(e) {
-    aleatorio = Math.floor(Math.random() * pc.length);
-    console.log(e.target.className);
-    document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "img/${pc[aleatorio]}.png"> `
-
-    if (pc[aleatorio] === pc[0]) {
-        texto.textContent = "empatou";
-    }
-    if (pc[aleatorio] === pc[1]) {
-        texto.textContent = "voce perdeu";
-    }
-    if (pc[aleatorio] === pc[2]) {
-        texto.textContent = "voce ganhou";
-    }
-
-
-}
-
-function tesoura() {
-    aleatorio = Math.floor(Math.random() * pc.length);
-    document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "img/${pc[aleatorio]}.png"> `
-    if (pc[aleatorio] === pc[2]) {
-        texto.textContent = "empatou";
-    }
-    if (pc[aleatorio] === pc[0]) {
-        texto.textContent = "voce perdeu";
-    }
-    if (pc[aleatorio] === pc[1]) {
-        texto.textContent = "voce ganhou";
-    }
-
-}
-
-function papel() {
-    aleatorio = Math.floor(Math.random() * pc.length);
-    document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "img/${pc[aleatorio]}.png">`
-    if (pc[aleatorio] === pc[1]) {
-        texto.textContent = "empatou";
-    }
-    if (pc[aleatorio] === pc[2]) {
-        texto.textContent = "voce perdeu";
-    }
-    if (pc[aleatorio] === pc[0]) {
-        texto.textContent = "voce ganhou";
-    }
-
-}*/
