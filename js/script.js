@@ -11,7 +11,7 @@ texto = document.getElementById("texto");
 function pedra() {
     aleatorio = Math.floor(Math.random() * pc.length);
     console.log(pc[aleatorio]);
-    document.getElementsByClassName("PC").InnerHTML = "<img class =${pc[aleatorio]}src = ${imagens[aletorio]}> "
+    document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "${imagens[aleatorio]}"> `
 
     if (pc[aleatorio] === pc[0]) {
         texto.textContent = "empatou";
@@ -28,7 +28,7 @@ function pedra() {
 
 function tesoura() {
     aleatorio = Math.floor(Math.random() * pc.length);
-    document.getElementsByClassName("PC").InnerHTML = "<img class =${pc[aleatorio]}src = ${imagens[aletorio]}> "
+    document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "${imagens[aleatorio]}"> `
     if (pc[aleatorio] === pc[2]) {
         texto.textContent = "empatou";
     }
@@ -43,7 +43,7 @@ function tesoura() {
 
 function papel() {
     aleatorio = Math.floor(Math.random() * pc.length);
-    document.getElementsByClassName("PC").InnerHTML = "<img class =${pc[aleatorio]}src = ${imagens[aletorio]}> "
+    document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "${imagens[aleatorio]}">`
     if (pc[aleatorio] === pc[1]) {
         texto.textContent = "empatou";
     }
