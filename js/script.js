@@ -7,9 +7,9 @@ var texto;
 texto = document.getElementById("texto");
 
 function seleção(e) {
-    let aleatorio = Math.floor(Math.random * pc.length);
+    var aleatorio = Math.floor(Math.random() * pc.length);
     document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "img/${pc[aleatorio]}.png"> `;
-    let nameclasseht = e.target.className;
+    var nameclasseht = e.target.className;
     if (pc[aleatorio] === nameclasseht) {
         texto.textContent = "empatou";
     }
