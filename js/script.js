@@ -1,5 +1,4 @@
 var pc = new Array();
-var aleatorio;
 pc[0] = "pedra";
 pc[1] = "papel";
 pc[2] = "tesoura";
@@ -7,9 +6,19 @@ var texto;
 
 texto = document.getElementById("texto");
 
-function pedra() {
+function seleção(e) {
+    let aleatorio = Math.floor(Math.random * pc.length);
+    document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "img/${pc[aleatorio]}.png"> `;
+    let nameclasseht = e.target.className;
+    if (pc[aleatorio] === nameclasseht) {
+        texto.textContent = "empatou";
+    }
+
+
+}
+/*function pedra(e) {
     aleatorio = Math.floor(Math.random() * pc.length);
-    console.log(pc[aleatorio]);
+    console.log(e.target.className);
     document.getElementById("PC").innerHTML = `<img class ="${pc[aleatorio]}"src = "img/${pc[aleatorio]}.png"> `
 
     if (pc[aleatorio] === pc[0]) {
@@ -53,4 +62,4 @@ function papel() {
         texto.textContent = "voce ganhou";
     }
 
-}
+}*/
